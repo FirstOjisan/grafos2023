@@ -1,13 +1,26 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class Vertice {
-    public static void setCont(int cont) {
-        Vertice.cont = cont;
+    String id;
+    int grau;
+
+    public Vertice() {
+        Scanner leitor = new Scanner(System.in);
+            System.out.println("\nDigite a identificação do Vértice");
+            String seleciona = leitor.nextLine();
+            this.id = seleciona;
+            this.grau =0;
     }
 
-    static int cont;
+    public Vertice(String id) {
+            this.id = id;
+    }
 
-    Vertice(){
-        cont++;
+
+    public String toString(){
+
+        return id+" Grau: "+grau;
     }
 }
